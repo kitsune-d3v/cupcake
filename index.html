@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles-2.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+   </head>
+   <body onload="loadCards('designer-cupcakes', designerCupcakes)">
+    <div class="page">
+        <section id="hero">
+            <div class="bin-hero-cards"> 
+                <div class="hero-card">
+                    <p>Zusaten:</p>
+                    <ul class="hero-list">
+                        <li>Hochwertige Bio-Zutaten</li>
+                        <li>Natürliche Süßungsmittel (z. B. Agavendicksaft)</li>
+                        <li>Pflanzliche Fette statt tierischer Produkte</li>
+                    </ul>
+                </div>
+                <div class="hero-card color">
+                    <p>Design:</p>
+                    <ul class="hero-list">
+                        <li>Mehrstöckig oder einstöckig, je nach Wunsch</li>
+                        <li>Individuelle Farb- und Dekorationsoptionen</li>
+                        <li>Handgefertigte Blumen, Perlen oder  personalisierte Details</li>
+                    </ul>
+                </div>
+                <div class="hero-card fresh">
+                    <p>Geschmack & Qualität:</p>
+                    <ul class="hero-list">
+                        <li>Perfekte Balance zwischen Süße und Aroma</li>
+                        <li>Saftig, luftig und voller natürlicher Aromen</li>
+                        <li>Frisch gebacken für höchste Qualität</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id='nav' class="nav">
+                <button onclick = "showNavMenu()">
+                    <img class="logo" src="resources/images/logo.png" alt="">
+                </button id="logo-button">
+                <div id="nav-links" class="nav-links">
+                    <a href="">Über uns</a>
+                    <a href="">Unsere Produkte</a>
+                    <a href="">Online bestellen</a>
+                    <a href="">Kontakt</a>
+                </div>
+            </div>
+            <div class="hero-text">
+                <h1>Natürliche Süße, authentischer Geschmack</h1>
+                <p>Genieße handgemachte Köstlichkeiten ohne künstliche Zusätze.</p>
+                <button class="hero-button"><a href="">Shop kontaktieren</a></button>
+            </div>
+        </section>
+        <section id="process">
+            <div class="bin-50">
+                <div class="bin-50-text bin-50-text-process">
+                    <h2>Handwerkskunst in jedem Gebäck: Unser Prozess</h2>
+                    <p>Unsere Backwaren kommen nicht aus einer Fabrik, sondern aus einer kleinen Backstube, in der jedes Rezept mit Sorgfalt und Hingabe von Hand gefertigt wird. Vom Mischen der Zutaten bis zur liebevollen Dekoration – jeder Schritt wird mit größter Aufmerksamkeit ausgeführt, um den besten Geschmack zu garantieren.
+                        Wir backen in kleinen Chargen, um Frische und höchste Qualität sicherzustellen. Jeder Muffin, jeder Kuchen ist ein Unikat und spiegelt unsere Leidenschaft für echtes Handwerk wider. Denn für uns ist Backen mehr als nur ein Prozess – es ist eine Möglichkeit, Liebe durch Essen zu teilen.
+                    </p>
+                </div>
+                <div class="bin-50-img">
+                    <img class="img-50" src="resources/images/img_prozess.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="selection">
+            <div class="bin-30">
+                <button id="designer-cupcakes" class="cupcake-menu" onclick="loadCards(this.id, designerCupcakes)">Designer Cupcakes</button>
+                <button id="cupcake-combos" class="cupcake-menu unselected-button" onclick ="loadCards(this.id, cupcakeCombos)">Cupcake Combos</button>
+                <button id="wedding-cakes" class="cupcake-menu unselected-button" onclick="loadCards(this.id, weddingCakes)">Wedding cakes</button>
+            </div>
+            <div id="cupcake-wrapper">
+                <div id="cupcake-list" class="cupcake-list">
+                </div>
+            </div>
+        </section>
+        <section id="ingredients">
+            <div class="bin-50">
+                <div class="bin-50-img">
+                    <img class="img-50" src="resources/images/img_zutaten.png" alt="">
+                </div>
+                <div class="bin-50-text bin-50-text-ingredients" >
+                    <h2 class="make-it-white">
+                        Unsere Zutaten: Natürlich, Rein & Vegan
+                    </h2>
+                    <p class="make-it-white">
+                        In unserer Backstube spielt die Natur die Hauptrolle. Wir verwenden ausschließlich biologische, pflanzliche und sorgfältig ausgewählte Zutaten, um köstliche und gesunde Backwaren herzustellen.
+                        Unsere Kuchen und Muffins bestehen aus Vollkornmehlen, natürlichen Süßungsmitteln wie Agavendicksaft und kaltgepressten Pflanzenölen. Auf Konservierungsstoffe, künstliche Farbstoffe und raffinierten Zucker verzichten wir komplett.
+                        Wir beziehen unsere Zutaten von lokalen Produzenten, die unsere Philosophie der Nachhaltigkeit und des Respekts vor der Natur teilen. So kannst du jeden Bissen mit gutem Gewissen genießen.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <section id="feedback">
+            <div class="feedback-bin">
+                <h2>Unsere Kunden sind so süß wie unsere Produkte</h2>
+                <div div class="bin-30 change-margin">
+                    <div class="feedback-card">
+                        <div class="bin-feedback-img">
+                            <img class="feedback-img" src="resources/images/sophia.png">
+                        </div>
+                        <div class="bin-feedback-text">
+                            <p class="feedback-inner-text">"Die besten veganen Muffins, die ich je probiert habe. Unglaublich, wie sie diesen Geschmack ohne Milch und Eier hinbekommen!"</p>
+                            <p class="feedback-inner-text make-it-bold">Sofia M.</p>
+                        </div>
+                    </div>
+                    <div class="feedback-card">
+                        <div class="bin-feedback-img">
+                            <img class="feedback-img" src="resources/images/ralph.png">
+                        </div>
+                        <div class="bin-feedback-text">
+                            <p class="feedback-inner-text">"Man schmeckt die Qualität der Zutaten. Außerdem ist der Geschmack einfach fantastisch. Besonders der Karottenkuchen ist ein Muss!"</p>
+                            <p class="feedback-inner-text make-it-bold">Ralph D.</p>
+                        </div>
+                    </div>
+                    <div class="feedback-card">
+                        <div class="bin-feedback-img">
+                            <img class="feedback-img" src="resources/images/beata.png">
+                        </div>
+                        <div class="bin-feedback-text">
+                            <p class="feedback-inner-text">"Es ist schwer, natürliche Backwaren zu finden, die wirklich lecker sind – aber hier ist es gelungen! Ich komme definitiv wieder."</p>
+                            <p class="feedback-inner-text make-it-bold">Beata E.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </section>
+        <section id="location">
+            <div class="bin-50 bin-50-location">
+                <div class="bin-50-text bin-50-text-location">
+                    <h2 class="no-margin">Unser Laden in Hamburg</h2>
+                    <p>Möchtest du unsere Backwaren frisch genießen? Dann besuche uns in unserem gemütlichen Laden in Hamburg! Hier erwarten dich täglich frisch gebackene Köstlichkeiten in einer warmen und einladenden Atmosphäre.</p>
+                    <p class="no-margin">📍 Adresse: Lindenstraße 42, 22085 Hamburg</p>
+                </div>
+                <div class="bin-50-img-location">
+                    <img class="img-process img-location" src="resources/images/img_shop.png" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p class="footer-text">© 2025. All rights reserved</p>
+    </footer>
+    <script src="script.js" defer>
+
+    </script>
+   </body>
+   
+</html>
