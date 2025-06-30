@@ -1,18 +1,15 @@
-
 h1 {
     color: #FFF;
     font-family: Carattere;
-    font-size: 61px;
+    font-size: 48px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
-
-
 h2 {
     font-family: Carattere;
-    font-size: 48px;
+    font-size: 36px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 72px */
@@ -21,71 +18,76 @@ h2 {
 button {
     color: #FFF;
     font-family: "Nunito Sans";
-    font-size: 18px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
+
+button:hover {cursor: pointer;}
+
 a {
     text-decoration: none;
     color: #FFF;
     font-family: "Nunito Sans";
-    font-size: 18px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 
 }
 
+a:hover {color: #DDA0C9;}
 
 p {
     color: #2A2438;
     font-family: "Nunito Sans";
-    font-size: 18px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: 150%; /* 27px */
 }
 
-body {
-    margin: 0;
-    background-color: #EFECF1;
-}
+body {margin: 0; background-color: #EFECF1;}
 
-footer {
-    background-color: #27202A;
-    margin: 0;
-}
+footer {background-color: #27202A; margin: 0;}
 
-a:hover {
-    color: #DDA0C9;
-}
+.page {display: flex; flex-direction: column;}
 
-button:hover {
-    cursor: pointer;
-}
+.make-it-white {color: #FFF;}
 
-.page {
-    display: flex;
-    flex-direction: column;
-}
+.change-margin {margin-top: 5%; margin-bottom: 0;}
 
-.nav {
-    position: relative;
-    padding-bottom: 7%;
-}
+.no-margin {margin-top: 0%;}
+
+.make-it-bold {font-weight: 700;}
+
+.nav {position: relative;}
 
 .nav button {
+    position:relative;
+    z-index: 1000;
+    background: transparent;
+    border: none;
+    margin-top: 1%;
+}
+
+.nav button img {
     position: relative;
 }
-.nav-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    gap: 5%;
-    padding-top: 1.5%;
 
+.nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 10%;
+    gap: 8%;
+    
+}
+
+.nav-links a {
+    padding: 5% 0;
 }
 
 .logo {
@@ -97,61 +99,43 @@ button:hover {
 
 .bin-50 {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0;
 }
 
-.bin-50-text-process {
-    padding: 8% 9% 10% 0;
-}
+.bin-50-text h2 {text-align: center;}
+.bin-50-text p {text-align: center;}
 
-.bin-50-text {
-    width: 60%;
-}
 
-.bin-50-text-process h2 {
-    text-align: center;
-}
+.bin-50-text-ingredients {background-color: #2A2438; padding: 8%;}
 
-.bin-50-text-ingredients {
-    padding: 10% 12% 0 8%;
-    background-color: #2A2438;
-}
-
-.make-it-white {
-    color: #FFF;
-}
+.bin-50-text-process h2 {text-align: center;}
+.bin-50-text-process {width:80%;}
 
 .bin-30 {
-    margin: 10% 10% 3% 10%;
     display: flex; 
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    width: 100%;
 }
 
-.bin-50-img {
-    width: 43%;
-}
+.bin-50-img {width: 100%;}
 
 .hero-text {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    padding: 2% 0 0 3.5%;
-    width: 35%;
+    width: 100%;
 }
 
-.hero-text h1 {
-    margin-bottom: 0px;
+.hero-text h1 {margin-bottom: 0px; text-align: center;}
 
-}
-.hero-text p {
-    color: #FFF;
-    margin-top: 0;
-}
+.hero-text p {color: #FFF; margin-top: 0; text-align: center;}
 
 .hero-button {
-    width: 45%;
-    margin-top: 4%;
+    width: 80%;
     border-radius: 6px;
     border: 1px solid #FFF;
     background: linear-gradient(90deg, rgba(221, 160, 201, 0.80) 0%, rgba(221, 160, 201, 0.40) 100%);
@@ -159,77 +143,26 @@ button:hover {
     padding: 10px 15px;
 }
 
-.hero-button:hover {
-    background: linear-gradient(-90deg, rgba(221, 160, 201, 0.80) 0%, rgba(221, 160, 201, 0.40) 100%);
-}
+.bin-hero-cards {display: none;}
 
-.hero-card {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.20);
-    padding: 1% 1% 0 1%;
-    border-radius: 8px;
-    border: 1px solid #FAFAFA;
-    max-width: 70%;
-}
+.hero-button:hover {background: linear-gradient(-90deg, rgba(221, 160, 201, 0.80) 0%, rgba(221, 160, 201, 0.40) 100%);}
 
-.bin-hero-cards {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    margin: 7% 0 0 63%;
-    
-}
+.img-50 {max-width: 100%;height: auto;}
 
-.hero-card p {
-    margin: 0;
-    font-size:16px;
-    color: #FAFAFA;
-}
-
-.hero-list ul {
-    margin-top: 0 !important
-}
-.hero-list li {
-   padding: 1% 0 1% 0;
-   font-size: 12px;
-   color: #FAFAFA;
-}
-
-.color {
-    margin: 15% 0 0 20%;
-}
-
-.fresh {
-    margin: 10% 0 0 12%;
-}
-
-.img-50 {
-    max-width: 100%;
-    height: auto;
-}
-
-.cupcake-menu {
-    width: 30%;
-}
-
-.cupcake-menu:hover{
-    cursor:pointer;
-}
+.cupcake-menu {width: 80%; margin: 5% 0%; padding: 2% 5%;}
 
 .cupcake-list {
     position: relative;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     gap: 5%;
-    margin: 0 10% 8% 10%;
 }
 
 .cupcake-card {
-    width: 18%;
+    width: 80%;
     position: relative;
-    margin: 5% 0% 5% 0%;
+    margin: 5% 0%;
 }
 
 .cupcake-title {
@@ -246,7 +179,7 @@ button:hover {
     color: #2A2438;
     text-align: right;
     font-family: "Nunito Sans";
-    font-size: 22px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 150%; /* 33px */
@@ -270,33 +203,11 @@ button:hover {
     backdrop-filter: blur(2px);
 }
 
-.cupcake-button:hover {
-    backdrop-filter: blur(2px);
-    background: linear-gradient(180deg, rgba(42, 36, 56, 0.80) 0%, rgba(42, 36, 56, 0.60) 100%);
-    cursor: pointer;
-}
-
-.cupcake-button:hover .cupcake-title, .cupcake-button:hover .cupcake-price {
-    color: #FFF;
-}
-
-.cupcake-button:hover ~ .cupcake-img {
-    padding-top: 0%;
-}
-
-
 .selected-button {
     background: linear-gradient(102deg, #211B25 3.45%, #483748 100%);
     border-radius: 7px;
     border: 1px solid #DDA0C9;
     color: #DDA0C9;
-    padding: 1% 2%;
-}
-
-.selected-button:hover {
-    background: linear-gradient(90deg, rgba(221, 160, 201, 0.80) 0%, rgba(221, 160, 201, 0.40) 100%);
-    color: #483748;
-    border: #483748
 }
 
 .unselected-button {
@@ -305,19 +216,6 @@ button:hover {
     color: #FFF;
 }
 
-.unselected-button:hover {
-    background: linear-gradient(-85deg, rgba(33, 27, 37, 0.30) 1.84%, rgba(72, 55, 72, 0.30) 100%);
-    color: #483748;
-}
-
-.change-margin {
-    margin-top: 5%;
-    margin-bottom: 0;
-}
-
-.no-margin {
-    margin-top: 0%;
-}
 .feedback-bin {
     display: flex;
     flex-direction: column;
@@ -326,9 +224,7 @@ button:hover {
     margin-bottom: 0;
 }
 
-.feedback-bin h2 {
-    margin: 5% 0 0 0;
-}
+.feedback-bin h2{text-align: center;}
 
 .feedback-img {
     border-radius: 100%;
@@ -339,7 +235,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:28%;
+    width:80%;
 }
 
 .bin-feedback-text {
@@ -357,28 +253,19 @@ button:hover {
     padding: 8%;
 }
 
-.make-it-bold {
-    font-weight: 700;
-}
+.bin-50-location {align-items: center;}
 
-.bin-50-location {
-    margin-left: 10%;
-    padding-bottom: 3%;
-    align-items: center;
-}
 .bin-50-text-location {
     display: flex;
     flex-direction: column;
-    padding: 5% 5% 10% 0;
+    padding: 0% 8% 10% 8%;
 }
 
 .bin-50-text-location h2 {
     padding-top: 10%;
 }
 
-.bin-50-img-location {
-    width: 65%;
-}
+.bin-50-img-location {width: 100%;}
 
 .img-location {
     width: 100%;
@@ -392,8 +279,12 @@ button:hover {
     padding: 20px 0 20px 0;
     margin: 0;
 }
+
+
 #hero {
     position: relative;
+    display: flex;
+    flex-direction: column;
     background: url("resources/images/img_hero_2.png"), linear-gradient(180deg, #493849 0%, #131118 100%);
     background-position: bottom;
     background-size: contain;
@@ -402,29 +293,7 @@ button:hover {
 
 }
 
-#process {
-    margin-left: 7%;
-}
-
-#selection {
-
-}
-
-#ingredients {
-
-}
-
-#feedback {
-
-}
-
-#location{
-
-}
-
-#cupcake-wrapper {
-    position: relative; 
-    margin:0;
+#cupcake-wrapper {position: relative; margin:0;
 }
 
 .pop-up-div {
@@ -445,43 +314,25 @@ button:hover {
     align-items: center;
     border: 1px solid #FFF;
     background-color: rgba(255, 255, 255, 0.82);
-    width: 50%;
-    min-height: 550px; 
+    width: 80%;
     margin-top: 20%;
     border-radius: 8px;
-    animation-name: pop-up;
-    animation-duration: 0.5s;
-}
-
-@keyframes pop-up {
-    from {width: 1%; min-height: 1%}
-    to {width: 50%; min-height: 550px}
-}
-
-.pop-up-img {
-    width: 40%;
-    height: auto;
-    margin-top: 0;
-    object-fit: contain;
-    border-radius: 8px;
-
 }
 
 .pop-up-inner-card {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     gap: 10%;
     padding: 3% 3% 5% 3%;
     position: relative;
-    opacity: 100%;
-    animation-name: fade-in;
-    animation-duration: 1.5s;
 }
-
-@keyframes fade-in {
-    from {opacity: 0%}
-    to {opacity: 100%}
+.pop-up-img {
+    width: 80%;
+    height: auto;
+    margin-top: 0;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 .bin-pop-up-text {
@@ -498,7 +349,214 @@ button:hover {
     border-radius: 8px;
 }
 
-.pop-up-card-button:hover {
-    background: linear-gradient(0deg, rgba(42, 36, 56, 0.80) 0%, rgba(42, 36, 56, 0.60) 100%); 
-    cursor: pointer;
+@media screen and (min-width: 600px) and (max-width: 1022px){
+    .nav {padding-bottom: 7%; display: flex; flex-direction: row; width: 100%}
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0% 5% 0 5%;
+    }
+
+    .hero-text {
+        justify-content: center;
+        width: 60%;
+    }
+
+    #hero {
+        align-items: center;
+    }
+
+    .bin-50-text-process {padding: 8% 8% 10% 0;}
+    .bin-50-text-ingredients {padding: 10% 12% 10% 8%;}
+
+    .cupcake-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 10% 8% 10%;
+    }
+
+    .cupcake-card {width: 40%; margin: 5% 0% 5% 0%;}
+
+    .cupcake-price {font-size: 22px;}
+}
+@media screen and (min-width:1023px) {
+   h1 {font-size: 61px;} 
+
+   h2 {font-size: 48px;}
+
+   button, a, p {font-size: 18px;}
+
+   .nav {padding-bottom: 7%; display: flex; flex-direction: row; width: 100%}
+
+
+   .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    padding: 1.5% 28% 0 20%;
+   }
+   
+   .nav-links a {padding: 1%;}
+
+   .bin-50 {flex-direction: row; align-items: normal; margin:0;}
+
+   .bin-50-text-process {padding: 8% 9% 10% 0;}
+
+   .bin-50-text {width: 60%;}
+   .bin-50-text h2 {text-align: left;}
+   .bin-50-text p {text-align: left;}
+
+   .bin-50-text-process h2 {text-align: left;}
+
+   .bin-50-text-ingredients {padding: 10% 12% 0 8%;}
+
+   .bin-30 {
+    margin: 5% 10% 3% 10%;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 80%;
+    }
+
+    .bin-50-img {width: 43%;}
+
+    .hero-text {
+        align-items: normal;
+        padding: 2% 0 0 3.5%;
+        width: 35%;
+    }
+
+    .hero-text h1 {text-align:left}
+    .hero-text p {text-align:left}
+
+    .hero-button { width: 45%; margin-top: 4%;}
+
+    .bin-hero-cards {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin: 7% 0 0 63%;
+        
+    }
+
+    .hero-card {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.20);
+        padding: 1% 1% 0 1%;
+        border-radius: 8px;
+        border: 1px solid #FAFAFA;
+        max-width: 70%;
+    }
+
+    .hero-card p {
+        margin: 0;
+        font-size:16px;
+        color: #FAFAFA;
+    }
+
+    .hero-list ul {
+        margin-top: 0 !important
+    }
+    .hero-list li {
+       padding: 1% 0 1% 0;
+       font-size: 12px;
+       color: #FAFAFA;
+    }
+    
+    .color {margin: 15% 0 0 20%;}
+    
+    .fresh {margin: 10% 0 0 12%;}
+
+    .cupcake-menu {width: 30%; margin: 0; padding:0;}
+
+    .cupcake-menu:hover{cursor:pointer;}
+
+    .cupcake-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 10% 8% 10%;
+    }
+
+    .cupcake-card {width: 18%; margin: 5% 0% 5% 0%;}
+
+    .cupcake-price {font-size: 22px;}
+
+    .cupcake-button:hover {
+        backdrop-filter: blur(2px);
+        background: linear-gradient(180deg, rgba(42, 36, 56, 0.80) 0%, rgba(42, 36, 56, 0.60) 100%);
+        cursor: pointer;
+    }
+
+    .cupcake-button:hover .cupcake-title, .cupcake-button:hover .cupcake-price {color: #FFF;}
+
+    .cupcake-button:hover ~ .cupcake-img {padding-top: 0%;}
+
+    .unselected-button:hover {
+        background: linear-gradient(-85deg, rgba(33, 27, 37, 0.30) 1.84%, rgba(72, 55, 72, 0.30) 100%);
+        color: #483748;
+    }
+    .selected-button {padding: 1% 2%;}
+
+    .selected-button:hover {
+        background: linear-gradient(90deg, rgba(221, 160, 201, 0.80) 0%, rgba(221, 160, 201, 0.40) 100%);
+        color: #483748;
+        border: #483748
+    }
+
+    .feedback-bin h2 {
+        margin: 5% 0 0 0;
+    }
+
+    .feedback-card {width:28%;}
+
+    .bin-50-location {margin-left: 10%; padding-bottom: 3%;}
+    .bin-50-img-location {width: 65%;}
+    .bin-50-text-location {padding: 5% 5% 10% 0;}
+    
+
+    .pop-up-card {
+        width: 50%;
+        min-height: 550px; 
+        animation-name: pop-up;
+        animation-duration: 0.5s;
+    }
+    @keyframes pop-up {
+        from {width: 1%; min-height: 1%}
+        to {width: 50%; min-height: 550px}
+    }
+
+    .pop-up-inner-card {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10%;
+        padding: 3% 3% 5% 3%;
+        position: relative;
+        opacity: 100%;
+        animation-name: fade-in;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade-in {
+        from {opacity: 0%}
+        to {opacity: 100%}
+    }
+
+    .pop-up-img {width: 40%;}
+
+    .pop-up-card-button:hover {
+        background: linear-gradient(0deg, rgba(42, 36, 56, 0.80) 0%, rgba(42, 36, 56, 0.60) 100%); 
+        cursor: pointer;
+    }
+
+    #process {margin-left: 7%;}
+
+    #hero {
+        align-items: flex-start;
+    }
+
 }
